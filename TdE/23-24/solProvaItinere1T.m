@@ -124,23 +124,19 @@ xvect(3);
 
 %% T9
 
-% come si fa???
+x = [6.675; 6.800; 6.900; 6.980];
+[p, c] = stimap(x);
+m = (x(3) - x(2)) / (2 * x(3) - x(4) - x(2));
 
 %% T10
 
 x(1) = 10;
-iter = 10;
+iter = 20;
 
-for k = 1:iter+1
+for k = 1:iter-1
     x(k+1) = 0.5 * (x(k) + 19 / x(k));
 end
 
 err = abs(sqrt(19) - x);
 
-k = 0:iter;
-semilogy(k, err(k+1), k, 1./k, k, 1./k.^2)
-
-% quadratico, metodo grafico
-% come posso garantire???
-
-% huh????????
+[p, c] = stimap(x);
