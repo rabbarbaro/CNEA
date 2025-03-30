@@ -1,7 +1,7 @@
 function [lambda, x, iter] = eigpower(A, tol, nmax, x0)
 
 % [lambda, x, iter] = eigpower(A, tol, nmax, x0)
-% metodo delle potenze per approssimare l'autovalore di modulo massimo e il
+% Metodo delle potenze per approssimare l'autovalore di modulo massimo e il
 % suo autovettore corrispondente, Ax = lambdax
 % IN
 %   - A: matrice quadrata (n x n)

@@ -1,10 +1,10 @@
 function [lambda, x, iter] = invpowershift(A, s, tol, nmax, x0)
 
 % [lambda, x, iter] = invpowershift(A, tol, nmax, x0)
-% metodo delle potenze inverse con shift per approssimare l'autovalore più
+% Metodo delle potenze inverse con shift per approssimare l'autovalore più
 % vicino al numero complesso s (shift) e il suo autovettore corrispondente,
 % M x = lambda x, con M = A - sI
-% il sistema lineare viene risolto applicando il metodo della
+% Il sistema lineare viene risolto applicando il metodo della
 % fattorizzazione LU una sola volta
 % IN
 %   - A: matrice quadrata (n x n)

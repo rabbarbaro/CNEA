@@ -1,7 +1,7 @@
 function K = sdpcond(A, tol, nmax)
 
 % K = sdpcond(A, tol, nmax)
-% metodo per il calcolo del numero di condizionamento spettrale di matrici
+% Metodo per il calcolo del numero di condizionamento spettrale di matrici
 % simmetriche e definite positive
 % IN
 %   - A: matrice sistema

@@ -1,9 +1,9 @@
 function [lambda, x, iter] = invpower(A, tol, nmax, x0)
 
 % [lambda, x, iter] = invpower(A, tol, nmax, x0)
-% metodo delle potenze inverse per approssimare l'autovalore di modulo
+% Metodo delle potenze inverse per approssimare l'autovalore di modulo
 % minimo e il suo autovettore corrispondente, A x = lambda x
-% il sistema lineare viene risolto applicando il metodo della
+% Il sistema lineare viene risolto applicando il metodo della
 % fattorizzazione LU una sola volta
 % IN
 %   - A: matrice quadrata (n x n)

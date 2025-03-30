@@ -1,6 +1,6 @@
 function D = qrbasic(A, tol, nmax)
 % D = qrbasic(A, tol, nmax)
-% calcola con il metodo delle iterazioni QR tutti gli autovalori della
+% Calcola con il metodo delle iterazioni QR tutti gli autovalori della
 % matrice A (convergenza non garantita in generale)
 % IN
 %   - A: matrice quadrata (n x n)
