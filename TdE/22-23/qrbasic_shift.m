@@ -1,6 +1,6 @@
 function D = qrbasic_shift(A,tol,nmax)
 %
-% D = qrbasic(A,tol,nmax)
+% D = qrbasic_shift(A,tol,nmax)
 %
 % Metodo delle iterazioni QR per l'approssimazione degli n autovalori di 
 % una matrice A quadrata a valori reali.

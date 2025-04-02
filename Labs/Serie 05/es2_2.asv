@@ -1,0 +1,28 @@
+clear
+clc
+close all
+
+% definisco il funzionale, il suo gradiente e la sua hessiana
+Phi = @(y1, y2) 3*y1.^2 + y2.^2 - y1/4 - y2/6 + exp(-2*y1.*y2);
+GradPhi = @(y1, y2) [6*y1 - 2*exp(-2*y1.*y2).*y2 - 1/4; ...
+                     2*y2 - 2*exp(-2*y1.*y2).*y1 - 1/6];
+HessPhi = @(y1, y2) [6 + 4*exp(-2*y1.*y2).*y2^2, exp(-2*y1.*y2).*(4*y1.*y2-2); ...
+                     exp(-2*y1.*y2).*(4*y1.*y2-2), 2 + 4*exp(-2*y1.*y2).*y1^2,];
+
+%% 1
+
+% definisco gli intervalli in y1 e y2 in cui visualizzare la funzione
+a1 = -0.15;
+b1 = 0.25;
+a2 = -0.05;
+b2 = 0.35;
+
+% plotto la funzione costo
+y1 = linspace(a1, b1, 100);
+y2 = linspace(a2, b2, 100);
+figure
+plot_phi(y1, y2, Phi)
+
+x0 = [-0.14, 0.14]';
+tol = 1e-8;
+max = 200;

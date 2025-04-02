@@ -56,5 +56,11 @@ while err > toll && it < nmax
     end
 end
 
+if (it < nmax)
+    fprintf("Convergenza al passo %d \n", it);
+else
+    fprintf("Raggiunto il numero massimo di passi %d \n", it);
 end
+fprintf("Radice calcolata: %-12.8f \n", xvect(end));
 
+end

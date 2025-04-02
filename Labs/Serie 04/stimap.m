@@ -1,5 +1,5 @@
 function [p,c]=stimap(xvect)
-%
+
 % [p,c]=stimap(xvect)
 %
 % Stima ordine e fattore di abbattimento di un metodo 

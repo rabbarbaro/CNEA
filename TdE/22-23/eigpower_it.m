@@ -1,6 +1,6 @@
-function [lambdaV,x,iter] = eigpower(A,tol,nmax,x0)
+function [lambdaV,x,iter] = eigpower_it(A,tol,nmax,x0)
 %
-% [lambda,x,iter] = eigpower(A,tol,nmax,x0)
+% [lambda,x,iter] = eigpower_it(A,tol,nmax,x0)
 % 
 % Metodo delle potenze (dirette) per approssimare l'autovalore di modulo
 % massimo di una matrice A (A x = lambda x)
