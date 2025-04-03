@@ -67,7 +67,7 @@ phi = @(x) x + mu/(2*pi) * cos(pi * x);
 dphi = @(x) 1 - mu/2 * sin(pi * x);
 
 % per verificare in modo teorico l'intervallo di valori di A tali per cui
-% il metodo delle iterazioni di punto fisso converge allo zero di (x)
+% il metodo delle iterazioni di punto fisso converge allo zero di phi(x)
 % dobbiamo verificare la condizione
 % |phi'(alpha)| < 1
 
