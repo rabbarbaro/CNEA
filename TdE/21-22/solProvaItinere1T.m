@@ -73,11 +73,6 @@ lower_bound_s = (lambda_47 + lambda_48)/2
 
 %% 7
 
-% ???
-
-% copilot risponde, con fonte
-% https://math.libretexts.org/Bookshelves/Calculus/CLP-1_Differential_Calculus_(Feldman_Rechnitzer_and_Yeager)/06%3A_Appendix/6.03%3A_C-_Root_Finding/6.3.02%3A_C.2_The_Error_Behaviour_of_Newton's_Method
-
 % Definizione della funzione e delle sue derivate
 f = @(x) exp(3*x) - 1;
 df = @(x) 3*exp(3*x);

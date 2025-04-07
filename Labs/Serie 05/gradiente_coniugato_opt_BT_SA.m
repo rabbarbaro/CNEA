@@ -1,6 +1,6 @@
-function [xvect, it] = gradiente_coniugato_opt(Phi, GradPhi, flag_metodo, x0, toll, nmax )
+function [xvect, it] = gradiente_coniugato_opt_BT_SA(Phi, GradPhi, flag_metodo, flag_alpha, x0, toll, nmax)
 
-% function [xvect, it] = gradiente_coniugato(Phi, GradPhi, flag_metodo, x0, toll, nmax )
+% [xvect, it] = gradiente_coniugato_opt_BT_SA(Phi, GradPhi, flag_metodo, flag_alpha, x0, toll, nmax)
 % algoritmo gradiente (gradiente coniugato) per la risoluzione di problemi 
 % di ottimizzazione per funzionali in 2-dimensioni. Tramite flag_metodo è
 % possibile scegliere se usare il metodo del gradiente o il metodo del
@@ -34,12 +34,27 @@ c1_bt = 1e-4;
 rho_bt = 0.3;
 nmax_bt = 10;
 
+% parametri sezione aurea
+a = 0;
+b = 1;
+tol_sa = 1e-5;
+nmax_sa = 20;
+
 % ciclo while per calcolo di x^{it+1} (it = 0, 1, ...)
 while it < nmax && err > toll
     
-    % calcolo il nuovo valore di alpha_k
-    [alpha_k, ~] = backtracking(Phi, GradPhi, x0, d, c1_bt, rho_bt, nmax_bt);
-     
+    % calcolo il nuovo valore di alpha_k (switch per scelta metodo)
+    switch flag_alpha
+        case 'BT' % backtracking
+            [alpha_k, ~] = backtracking(Phi, GradPhi, x0, d, c1_bt, rho_bt, nmax_bt);
+        case 'SA' % sezione aurea
+            f = @(alpha) Phi(x0(1) + alpha*d(1), x0(2) + alpha*d(2));
+            [alpha_k_v, ~, ~] = sezione_aurea(f, a, b, tol_sa, nmax_sa);
+            alpha_k = alpha_k_v(end);
+        otherwise
+            error('metodo CG non definito');
+    end
+
     % calcolo il nuovo valore di x
     x_new = x0 + alpha_k * d;
 

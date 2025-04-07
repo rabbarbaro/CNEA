@@ -31,7 +31,7 @@ d = -GradPhi(x0(1), x0(2));
 
 % parametri backtracking
 c1_bt = 1e-4;
-rho_bt = 0.3;
+rho_bt = 0.5;
 nmax_bt = 10;
 
 % ciclo while per calcolo di x^{it+1} (it = 0, 1, ...)
