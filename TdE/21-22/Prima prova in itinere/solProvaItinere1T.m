@@ -2,7 +2,7 @@ clear
 clc
 close all
 
-%% 1
+%% T1
 
 beta = 2;
 t = 4;
@@ -12,7 +12,7 @@ e = 2;
 
 x = (-1)^s * m * beta^(e - t)
 
-%% 2
+%% T2
 
 n = 90;
 S = 0;
@@ -22,7 +22,7 @@ for k = 0:n
 end
 S*4
 
-%% 3
+%% T3
 
 % per ogni riga completa faremo due sottrazioni e due somme
 % la prima riga è semplice assegnazione
@@ -31,7 +31,7 @@ S*4
 n = 2000;
 nflops = 2 + (n-2)*4
 
-%% 4
+%% T4
 
 n = 7;
 A = hilb(n);
@@ -41,7 +41,7 @@ x = A\b;
 res = b - A * x;
 err_rel_est = cond(A) * norm(res) / norm(b)
 
-%% 5
+%% T5
 
 % 3.7 + 3/10 * gamma
 
@@ -54,7 +54,7 @@ err_rel_est = cond(A) * norm(res) / norm(b)
 % [lambda,x,iter] = eigpower(A,1e-12,1,x0);
 % lambda
 
-%% 6
+%% T6
 
 n = 100;
 A = 2*diag(ones(n, 1)) - diag(ones(n-1, 1), -1) - diag(ones(n-1, 1), +1);
@@ -71,7 +71,7 @@ upper_bound_s = (lambda_47 + lambda_46)/2
 lower_bound_s = (lambda_47 + lambda_48)/2
 % s != lambda_47
 
-%% 7
+%% T7
 
 % Definizione della funzione e delle sue derivate
 f = @(x) exp(3*x) - 1;
@@ -94,7 +94,7 @@ error_k_plus_1 = (f_double_prime / (2 * f_prime)) * error_k^2;
 fprintf('Errore al passo k: %.10e\n', error_k);
 fprintf('Errore stimato al passo k+1: %.10e\n', error_k_plus_1);
 
-%% 8
+%% T8
 
 f = @(x) exp(-4*x) - 2*x;
 x0 = 1;
@@ -112,7 +112,7 @@ end
 k
 x
 
-%% 9
+%% T9
 
 phi = @(x) x - 9/2 * log(x / 3);
 x0 = 2;
@@ -120,7 +120,7 @@ x0 = 2;
 [succ, it] = ptofis(x0, phi, 4, 1e-12);
 succ(end)
 
-%% 10
+%% T10
 
 phi = @(x) x - 140/11 * (exp(x/7 - 1) - 1);
 dphi = @(x) 1 - 20/11 * exp(x/7 - 1);

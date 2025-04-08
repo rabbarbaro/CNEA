@@ -2,7 +2,7 @@ clear
 clc
 close all
 
-%% 1
+%% T1
 
 s = 0;
 e = 3;
@@ -12,7 +12,7 @@ t = 5;
 
 x = (-1)^s * m * b^(e - t)
 
-%% 2
+%% T2
 
 % divisione 5/x_n
 % somma x_n + (5/x_n)
@@ -20,7 +20,7 @@ x = (-1)^s * m * b^(e - t)
 
 nflops = 50 * 3
 
-%% 3
+%% T3
 
 % fattorizzazione A 3 * (n - 1)
 % risoluzione sistema lineare 2 * (n - 1) + 3 * (n - 1) + 1
@@ -30,11 +30,11 @@ jj = 10;
 
 flops = 3 * (n - 1) + jj * (2 * (n - 1) + 3 * (n - 1) + 1)
 
-%% 4
+%% T4
 
 % [3/(2 * sqrt(2)) + gamma; 2]
 
-%% 5
+%% T5
 
 A = [4 -1 0 0 0
     1 4 0 0 0
@@ -49,7 +49,7 @@ sort(eig(A), 'descend')
 % lo shift deve stare più vicino a 3 che a 6 o -1 (e diverso da 3)
 % 1 < s < 4, s != 3
 
-%% 6
+%% T6
 
 a = 0;
 b = 5;
@@ -57,7 +57,7 @@ tol = 1e-3;
 
 k_min = ceil(log2((b - a)/tol) - 1)
 
-%% 7
+%% T7
 
 phi = @(x) 0.25*(x.^4) + 0.5*(x.^2) - 3*x + 5;
 dphi = @(x) x.^3 + x - 3;
@@ -71,7 +71,7 @@ xvect(2)
 xvect(3)
 xvect(6)
 
-%% 8
+%% T8
 
 f = @(x) sin(pi/3 * x) * (x - 3).^2;
 df = @(x) pi/3 * cos(pi/3 * x) * (x - 3).^2 + 2*(sin(pi/3 * x) * (x - 3));
@@ -86,7 +86,7 @@ tol = 1e-12;
 xvect(2)
 xvect(3)
 
-%% 9
+%% T9
 
 phi = @(x) x - 1/3 * (1 - exp(1 - 3*x));
 dphi = @(x) 1 - exp(1 - 3*x);
@@ -94,7 +94,7 @@ dphi(1/3)
 d2phi = @(x) 3*exp(1 - 3*x);
 d2phi(1/3)
 
-%% 10
+%% T10
 
 % | 6gamma | < 1 E 6gamma <= 0
 % - 1/6 < gamma < 0
