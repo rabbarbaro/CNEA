@@ -132,3 +132,31 @@ it
 x_vec(1, 2)
 x_vec(1, 3)
 x_vec(1, end)
+
+%% 4bis
+
+n = 1000;
+A = 2*diag(ones(n,1)) - diag(ones(n-1,1),1) - diag(ones(n-1,1),-1);
+
+tol = 1e-6;
+nmax = 1000;
+x0 = ones(n, 1);
+
+[lambda, x, iter] = eigpower(A, tol, nmax, x0);
+
+errors = zeros(nmax, 1);
+lambda_old = 0;
+
+for k = 1:nmax
+    x = A*x;
+    y = x / norm(x);
+    lambda_new = y' * A * y;
+
+    errors(k) = abs(lambda_new - 2*(1+cos(1/1001 * pi)));
+    if abs(lambda_new - lambda_old) / abs(lambda_new) < tol
+        break;
+    end
+    lambda_old = lambda_new;
+end
+
+q = errors(k) / errors(k-1)

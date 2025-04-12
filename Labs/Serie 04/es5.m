@@ -53,7 +53,7 @@ end
 % elevando il denominatore all'ordine di convergenza troveremo il fattore
 % di convergenza
 % aumentando l'ordine di convergenza, il primo che avrà un fattore di
-% convergenza non nullo sarà l'ordine di convergenza
+% convergenza non nullo o non infinito sarà l'ordine di convergenza
 % dalla teoria:
 % lim ||x^(k+1)-alpha||/||x^(k)-alpha||^p = mu
 
