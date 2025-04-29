@@ -34,7 +34,7 @@ while it < nmax && err > toll
     % calcolo il nuovo valore di x
     x_new = x0 + alpha_k*d;
     
-    % cggiorno la direzione di discesa
+    % aggiorno la direzione di discesa
     d = - HessPhi(x_new(1), x_new(2)) \ GradPhi(x_new(1), x_new(2));
 
     % aggiorno quantità per metodo iterativo
