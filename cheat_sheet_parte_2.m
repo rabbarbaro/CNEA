@@ -83,3 +83,5 @@ pz = cubicspline(x, y, z);
 % y array dei valori nei nodi
 % xq array dei punti su cui valutare
 s = spline(x, y, xq);
+
+%% da aggiornare
