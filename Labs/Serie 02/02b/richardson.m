@@ -5,18 +5,18 @@ function [x, k] = richardson(A, b, P, x0, toll, nmax, alpha)
 % precondizionato (gradiente precondizionato) per risolvere iterativamente
 % sistemi lineari Ax = b
 % IN
-% - A: matrice del sistema
-% - b: vettore termine noto
-% - P: matrice precondizionatore
-% - x0: guess iniziale
-% - toll: tolleranza sul residuo normalizzato
-% - nmax: nmax: massimo numero di iterazioni
-% - (opt) alpha: opzionale, parametro di accelerazione
+%   - A: matrice del sistema
+%   - b: vettore termine noto
+%   - P: matrice precondizionatore
+%   - x0: guess iniziale
+%   - toll: tolleranza sul residuo normalizzato
+%   - nmax: nmax: massimo numero di iterazioni
+%   - (opt) alpha: opzionale, parametro di accelerazione
 %       - se non assegnato si considera il metodo dinamico (gradiente
 %         precondizionato)
 % OUT
-% - x: soluzione ottenuta
-% - k: numero di iterazioni effettuate
+%   - x: soluzione ottenuta
+%   - k: numero di iterazioni effettuate
 
 %% verifica input
 
