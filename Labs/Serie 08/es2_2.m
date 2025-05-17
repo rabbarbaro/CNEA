@@ -2,7 +2,7 @@ clear
 clc
 close all
 
-% definisco la condizioone iniziale del problema di cauchy
+% definisco la condizione iniziale del problema di cauchy
 y0 = 2;
 
 % definisco l'intervallo di tempo

@@ -1,10 +1,5 @@
 function [t_h, u_h, vett_it_newton] = eulero_indietro_newton(f, df_dy, t_max, y_0, h)
-
-% t_h               vettore dei tempi in cui la soluzione viene calcolata
-% u_h               vettore delle soluzioni calcolate in t_h
-% vett_it_newton    vettore delle iterazioni del metodo di Newton ad ogni
-%                   passo
-
+    
 % [t_h, u_h, vett_it_newton] = eulero_indietro_newton(f, df_du, t_max, valore_iniziale, delta_t)
 %
 % Risolve il problema di Cauchy (ODE primo ordine)
